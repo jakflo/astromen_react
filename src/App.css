@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+table.normTab, table.normTab tbody tr, table.normTab tbody th, table.normTab tbody td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table.normTab tbody th, table.normTab tbody td, input.edit {
+    padding: 2px 7px; 
+    text-align: center;
+    font-size: 17px
+}
+table.normTab tbody th {
+    background-color: #4ddbff;
+}
+table.normTab tbody tr:hover {
+    background-color: #cccccc;
+}
+table.normTab tbody tr.marked {
+    background-color: #00cc44;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hidden {
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input.edit {
+    margin: 4px 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+span.form_error, ul.form_errors li, p.error {
+    font-weight: bold;
+    color: red;
 }
 
-.App-link {
-  color: #61dafb;
+p.notice {
+    font-weight: bold;
+    color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr.marked_edit {
+    background-color: #ffff00;    
+}
+tr.marked_delete {
+    background-color: #ff4d4d;    
+}
+
+ul.flash {
+    list-style-type: none;
+    padding: 0;
+}
+ul.flash li {
+    font-weight: bold;        
+}
+ul.flash.notice li {
+    color: blue;
 }
